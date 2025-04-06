@@ -16,8 +16,10 @@ pipeline{
                 DOCKER_HUB = credentials('dockerhubCreds')
             }
             steps{
-                bat 'docker login -u %DOCKER_HUB_USR% -p %DOCKER_HUB_PSW%'
+                bat 'echo %DOCKER_HUB_PSW% | docker login -u %DOCKER_HUB_USR% --password-stdin'
                 bat "docker push srinidhips/selenium"
+                bat "docker tag srinidhips/selenium:latest srinidhips/selenium:%BUILD_NUMBER%"
+                bat "docker push srinidhips/selenium:%BUILD_NUMBER%"
             }
         } 
     } 
