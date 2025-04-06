@@ -3,25 +3,25 @@
     <test name="passengers-count-1">
         <!--        <parameter name="noOfPassengers" value="1" />-->
         <!--        <parameter name="expectedPrice" value="$584 USD" />-->
-        <parameter name="testDataPath" value="test-data/flight-reservation/passenger-1.json" />
+        <parameter name="testDataPath" value="test-data/flight-reservation/Passenger-1.json" />
         <classes>
             <class name="com.nidhi.tests.flightreservation.FlightReservationTest"/>
         </classes>
     </test>
     <test name="passengers-count-2">
-        <parameter name="testDataPath" value="test-data/flight-reservation/passenger-2.json" />
+        <parameter name="testDataPath" value="test-data/flight-reservation/Passenger-2.json" />
         <classes>
             <class name="com.nidhi.tests.flightreservation.FlightReservationTest"/>
         </classes>
     </test>
     <test name="passengers-count-3">
-        <parameter name="testDataPath" value="test-data/flight-reservation/passenger-3.json" />
+        <parameter name="testDataPath" value="test-data/flight-reservation/Passenger-3.json" />
         <classes>
             <class name="com.nidhi.tests.flightreservation.FlightReservationTest"/>
         </classes>
     </test>
     <test name="passengers-count-4">
-        <parameter name="testDataPath" value="test-data/flight-reservation/passenger-4.json" />
+        <parameter name="testDataPath" value="test-data/flight-reservation/Passenger-4.json" />
         <classes>
             <class name="com.nidhi.tests.flightreservation.FlightReservationTest"/>
         </classes>
