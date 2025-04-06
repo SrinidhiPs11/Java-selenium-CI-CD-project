@@ -17,9 +17,10 @@ pipeline{
             }
             steps{
                 bat 'echo %DOCKER_HUB_PSW% | docker login -u %DOCKER_HUB_USR% --password-stdin'
-                bat "docker push srinidhips/selenium"
-                bat "docker tag srinidhips/selenium:latest srinidhips/selenium:%BUILD_NUMBER%"
-                bat "docker push srinidhips/selenium:%BUILD_NUMBER%"
+                bat "docker push srinidhips/seleniumsuite"
+                //use the below line if you want to update the latest push and also create a new image with build_number as tag
+                //bat "docker tag srinidhips/selenium:latest srinidhips/selenium:%BUILD_NUMBER%"
+                //bat "docker push srinidhips/selenium:%BUILD_NUMBER%"
             }
         } 
     } 
