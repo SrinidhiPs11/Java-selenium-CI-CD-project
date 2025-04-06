@@ -1,11 +1,11 @@
 {
-  "firstName": "marshall",
-  "lastName": "mathers",
-  "email": "eminem@hiphop.com",
-  "password": "m&m",
-  "street": "456 main street",
-  "city": "detroit",
-  "zip": "40001",
-  "passengersCount": "2",
-  "expectedPrice": "$1169 USD"
+  "firstName": "cheb",
+  "lastName": "khaled",
+  "email": "khaled@rai.com",
+  "password": "didi",
+  "street": "101 non main street",
+  "city": "las vegas",
+  "zip": "50001",
+  "passengersCount": "3",
+  "expectedPrice": "$1753 USD"
 }
