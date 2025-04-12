@@ -11,4 +11,4 @@ ADD target/docker-resources ./
 ADD runner.sh runner.sh 
  # Environment varibales
 
-ENTRYPOINT sh runner.sh
+ENTRYPOINT ["sh", "runner.sh"]
