@@ -20,26 +20,27 @@ echo "-------------------------------------------"
 echo "Checking if hub is ready..!"
 
 count=0
-
+printed_error = false
 # Wait for Selenium Hub to be ready
 while true; do
     response=$(curl -s http://${HUB_HOST:-hub}:4444/status)
     
     # Check if curl failed
     if [ -z "$response" ]; then
+        if [ "$printed_error" = false ]; then
         echo "Error: No response from Selenium Hub!"
-        continue
-    fi
+        printed_error=true
+        fi
+    else
+        # Extract the "ready" value safely
+        ready=$(echo "$response" | jq -r .value.ready 2>/dev/null)
 
-    # Extract the "ready" value safely
-    ready=$(echo "$response" | jq -r .value.ready 2>/dev/null)
-
-    # Ensure "ready" is either "true" or "false" before using it
-    if [ "$ready" == "true" ]; then
+        # Ensure "ready" is either "true" or "false" before using it
+        if [ "$ready" == "true" ]; then
         echo "Selenium Hub is ready!"
         break
+        fi
     fi
-
     count=$((count+1))
     echo "Attempt: ${count}"
 
